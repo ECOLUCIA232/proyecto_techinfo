@@ -3,210 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoEncuesta | Energías Renovables</title>
-    <link rel="stylesheet" href="contenido.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Encuesta Energías Limpias</title>
+    <link rel="stylesheet" href="Contenido.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="background-wrapper">
-        <div class="leaf leaf-1"></div>
-        <div class="leaf leaf-2"></div>
-        <div class="leaf leaf-3"></div>
-        <div class="sun"></div>
-    </div>
-
-    <div class="container animate__animated animate__fadeIn">
+    <div class="container">
         <header class="header">
-            <div class="logo">
-                <svg viewBox="0 0 100 100" class="leaf-icon">
-                    <path d="M50,5 C70,5 95,30 95,50 C95,70 70,95 50,95 C30,95 5,70 5,50 C5,30 30,5 50,5 Z" fill="#A8E6CF"/>
-                    <path d="M50,20 C65,20 80,35 80,50 C80,65 65,80 50,80 C35,80 20,65 20,50 C20,35 35,20 50,20 Z" fill="#DCEDC1"/>
-                </svg>
-                <h1>Eco<span>Encuesta</span></h1>
-            </div>
-            <p class="subtitle">Descubre cómo los estudiantes contribuyen al futuro verde</p>
-            <div class="progress-bar">
-                <div class="progress-step active" data-step="1"></div>
-                <div class="progress-step" data-step="2"></div>
-                <div class="progress-step" data-step="3"></div>
-                <div class="progress-step" data-step="4"></div>
-            </div>
+            <div class="leaf-decoration leaf-left"><i class="fas fa-leaf"></i></div>
+            <h1>Energías Limpias en la Educación</h1>
+            <div class="leaf-decoration leaf-right"><i class="fas fa-leaf"></i></div>
         </header>
-
-        <main class="form-container">
-            <form id="encuestaForm">
-                <!-- Paso 1 - Nivel educativo -->
-                <div class="form-step active" data-step="1">
-                    <h2><span class="step-number">1</span> ¿En qué nivel estudias?</h2>
-                    <div class="option-grid">
-                        <button type="button" class="option-btn" data-value="primaria">
-                            <div class="icon">👧👦</div>
-                            <span>Primaria</span>
-                        </button>
-                        <button type="button" class="option-btn" data-value="secundaria">
-                            <div class="icon">🧑🎒</div>
-                            <span>Secundaria</span>
-                        </button>
-                        <button type="button" class="option-btn" data-value="bachillerato">
-                            <div class="icon">👩‍🎓👨‍🎓</div>
-                            <span>Bachillerato</span>
-                        </button>
-                    </div>
-                    <input type="hidden" id="nivel" name="nivel" required>
-                </div>
-
-                <!-- Paso 2 - Tipo de energía -->
-                <div class="form-step" data-step="2">
-                    <h2><span class="step-number">2</span> ¿Qué energías renovables usas?</h2>
-                    <div class="energy-cards">
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="solar">
-                            <div class="card-content">
-                                <div class="energy-icon solar">☀️</div>
-                                <h3>Solar</h3>
-                                <p>Paneles que captan energía del sol</p>
-                            </div>
-                        </label>
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="eolica">
-                            <div class="card-content">
-                                <div class="energy-icon eolica">🌬️</div>
-                                <h3>Eólica</h3>
-                                <p>Molinos que usan la fuerza del viento</p>
-                            </div>
-                        </label>
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="hidraulica">
-                            <div class="card-content">
-                                <div class="energy-icon hidraulica">💧</div>
-                                <h3>Hidráulica</h3>
-                                <p>Energía de ríos y cascadas</p>
-                            </div>
-                        </label>
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="biomasa">
-                            <div class="card-content">
-                                <div class="energy-icon biomasa">🌿</div>
-                                <h3>Biomasa</h3>
-                                <p>Energía de materiales orgánicos</p>
-                            </div>
-                        </label>
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="geotermica">
-                            <div class="card-content">
-                                <div class="energy-icon geotermica">🌋</div>
-                                <h3>Geotérmica</h3>
-                                <p>Calor del interior de la Tierra</p>
-                            </div>
-                        </label>
-                        <label class="energy-card">
-                            <input type="checkbox" name="energia" value="ninguna">
-                            <div class="card-content">
-                                <div class="energy-icon ninguna">🚫</div>
-                                <h3>Ninguna</h3>
-                                <p>No uso energías renovables</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Paso 3 - Frecuencia -->
-                <div class="form-step" data-step="3">
-                    <h2><span class="step-number">3</span> ¿Con qué frecuencia las usas?</h2>
-                    <div class="frequency-slider">
-                        <div class="slider-labels">
-                            <span>Nunca</span>
-                            <span>Ocasional</span>
-                            <span>Mensual</span>
-                            <span>Semanal</span>
-                            <span>Diario</span>
-                        </div>
-                        <input type="range" id="frecuencia" name="frecuencia" min="0" max="4" step="1" value="0">
-                        <div class="slider-ticks">
-                            <div class="tick"></div>
-                            <div class="tick"></div>
-                            <div class="tick"></div>
-                            <div class="tick"></div>
-                            <div class="tick"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Paso 4 - Comentarios -->
-                <div class="form-step" data-step="4">
-                    <h2><span class="step-number">4</span> Tu opinión nos importa</h2>
-                    <div class="comment-section">
-                        <textarea id="comentarios" name="comentarios" placeholder="¿Qué piensas sobre las energías renovables? ¿Crees que tu escuela debería usarlas más?"></textarea>
-                        <div class="character-count"><span id="char-count">0</span>/200</div>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Enviar encuesta</span>
-                        <svg viewBox="0 0 24 24" class="send-icon">
-                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                        </svg>
-                    </button>
-                </div>
-            </form>
-        </main>
-
-        <div class="navigation-btns">
-            <button class="nav-btn prev-btn" disabled>
-                <svg viewBox="0 0 24 24" class="nav-icon">
-                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
-                </svg>
-                Anterior
-            </button>
-            <button class="nav-btn next-btn">
-                Siguiente
-                <svg viewBox="0 0 24 24" class="nav-icon">
-                    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                </svg>
-            </button>
+        
+        <div class="intro-section">
+            <div class="earth-icon">
+                <i class="fas fa-globe-americas"></i>
+            </div>
+            <p>¡Participa en nuestra encuesta sobre el uso de energías limpias entre estudiantes de bachillerato y universidad! Tu opinión nos ayudará a entender mejor la conciencia ambiental en el ámbito educativo.</p>
         </div>
-    </div>
-
-    <!-- Resultados -->
-    <div id="resultados" class="hidden">
-        <div class="result-container animate__animated animate__zoomIn">
-            <div class="confetti"></div>
-            <div class="confetti"></div>
-            <div class="confetti"></div>
-            <svg viewBox="0 0 100 100" class="celebration-icon">
-                <path d="M50,5 C70,5 95,30 95,50 C95,70 70,95 50,95 C30,95 5,70 5,50 C5,30 30,5 50,5 Z" fill="#A8E6CF"/>
-                <path d="M50,20 C65,20 80,35 80,50 C80,65 65,80 50,80 C35,80 20,65 20,50 C20,35 35,20 50,20 Z" fill="#DCEDC1"/>
-                <text x="50" y="55" text-anchor="middle" fill="#2E7D32">✓</text>
-            </svg>
-            <h2>¡Gracias por tu contribución ecológica!</h2>
-            <div class="result-content">
-                <p>Tus respuestas ayudarán a entender mejor el uso de energías limpias entre estudiantes.</p>
-                <div class="result-details">
-                    <div class="result-item">
-                        <span class="result-label">Nivel educativo:</span>
-                        <span class="result-value" id="res-nivel"></span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Energías usadas:</span>
-                        <span class="result-value" id="res-energias"></span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Frecuencia:</span>
-                        <span class="result-value" id="res-frecuencia"></span>
-                    </div>
-                    <div class="result-item full-width" id="res-comentarios-container">
-                        <span class="result-label">Tu opinión:</span>
-                        <span class="result-value" id="res-comentarios"></span>
-                    </div>
+        
+        <form id="encuestaForm" class="encuesta-form">
+            <div class="form-section">
+                <h2><i class="fas fa-user-graduate"></i> Información Personal</h2>
+                <div class="form-group">
+                    <label for="nivel">Nivel educativo:</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="" disabled selected>Selecciona tu nivel</option>
+                        <option value="bachillerato">Bachillerato</option>
+                        <option value="universidad">Universidad</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="15" max="30" required>
                 </div>
             </div>
-            <div class="eco-tip">
-                <h3>💡 Dato eco-amigable</h3>
-                <p id="random-tip"></p>
+            
+            <div class="form-section">
+                <h2><i class="fas fa-solar-panel"></i> Uso de Energías Limpias</h2>
+                
+                <div class="form-group">
+                    <label>¿Utilizas energías limpias en tu vida diaria?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="si-energia" name="usa-energia" value="si" required>
+                        <label for="si-energia" class="radio-label">Sí</label>
+                        
+                        <input type="radio" id="no-energia" name="usa-energia" value="no">
+                        <label for="no-energia" class="radio-label">No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="tipo-energia-group">
+                    <label for="tipo-energia">¿Qué tipo de energía limpia utilizas? (Puedes seleccionar varias)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="solar" name="tipo-energia" value="solar">
+                        <label for="solar" class="checkbox-label">Solar</label>
+                        
+                        <input type="checkbox" id="eolica" name="tipo-energia" value="eolica">
+                        <label for="eolica" class="checkbox-label">Eólica</label>
+                        
+                        <input type="checkbox" id="hidroelectrica" name="tipo-energia" value="hidroelectrica">
+                        <label for="hidroelectrica" class="checkbox-label">Hidroeléctrica</label>
+                        
+                        <input type="checkbox" id="biomasa" name="tipo-energia" value="biomasa">
+                        <label for="biomasa" class="checkbox-label">Biomasa</label>
+                        
+                        <input type="checkbox" id="geotermica" name="tipo-energia" value="geotermica">
+                        <label for="geotermica" class="checkbox-label">Geotérmica</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="frecuencia">¿Con qué frecuencia utilizas energías limpias?</label>
+                    <select id="frecuencia" name="frecuencia">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="diario">Diariamente</option>
+                        <option value="semanal">Semanalmente</option>
+                        <option value="mensual">Mensualmente</option>
+                        <option value="ocasional">Ocasionalmente</option>
+                    </select>
+                </div>
             </div>
-            <button id="nuevaEncuesta" class="restart-btn">Realizar otra encuesta</button>
+            
+            <div class="form-section">
+                <h2><i class="fas fa-graduation-cap"></i> Conocimiento en tu Institución</h2>
+                
+                <div class="form-group">
+                    <label for="conocimiento">¿Tu institución educativa promueve el uso de energías limpias?</label>
+                    <select id="conocimiento" name="conocimiento" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="si-promueve">Sí, activamente</option>
+                        <option value="poco">Un poco</option>
+                        <option value="no-promueve">No promueve</option>
+                        <option value="no-se">No estoy seguro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comentarios">Comentarios adicionales:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="¿Qué sugerencias tienes para promover más el uso de energías limpias en instituciones educativas?"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" id="btnLimpiar" class="btn btn-secondary">
+                    <i class="fas fa-broom"></i> Limpiar
+                </button>
+                <button type="submit" id="btnEnviar" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Enviar Encuesta
+                </button>
+            </div>
+        </form>
+        
+        <div id="resultado" class="resultado-container hidden">
+            <div class="resultado-content">
+                <i class="fas fa-check-circle resultado-icon"></i>
+                <h2>¡Gracias por participar!</h2>
+                <p>Tu información ha sido registrada correctamente. Juntos podemos hacer un mundo más sostenible.</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="contador">0</p>
+                <button id="btnVerResultados" class="btn btn-tertiary">
+                    <i class="fas fa-chart-bar"></i> Ver resultados acumulados
+                </button>
+            </div>
         </div>
     </div>
-
-    <script src="contenido.js"></script>
+    
+    <footer class="footer">
+        <p>Encuesta sobre el uso de energías limpias en instituciones educativas - 2023</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    
+    <script src="Contenido.js"></script>
 </body>
 </html>
