@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f9fa;
+        }
+        
+        h1 {
+            color: #2a9d8f;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .quienes-somos {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            quotes: "“" "”" "‘" "’";
+        }
+        
+        .quienes-somos::before {
+            content: open-quote;
+            font-size: 3em;
+            line-height: 0;
+            color: #2a9d8f;
+            vertical-align: -0.4em;
+        }
+        
+        .quienes-somos::after {
+            content: close-quote;
+            font-size: 3em;
+            line-height: 0;
+            color: #2a9d8f;
+            vertical-align: -0.6em;
+        }
+        
+        .canva-btn {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 150px;
+            text-decoration: none;
+        }
+        
+        .canva-btn:hover {
+            background-color: #21867a;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiénes Somos</h1>
+    
+    <div class="quienes-somos">
+        <p>Somos cuatro integrantes que cursan cuarto semestre de bachillerato en la universidad del valle de México en el campus lomas verdes, variamos entre las edades 16-17, buscamos educar y comunicar sobre la importancia del uso de las energías limpias y el peligro de depender de energías no sustentables. Tenemos iniciativa propia, somos autoinspirados, creemos en la justicia y en las personas, nos gusta el cuidado del medio ambiente y la preservación de la biodiversidad.</p>
+    </div>
+    
+    <a href="https://www.canva.com/" class="canva-btn" id="canvaBtn">Ver en Canva</a>
+    
+    <script>
+        document.getElementById('canvaBtn').addEventListener('click', function() {
+            // Aquí puedes cambiar la URL por tu enlace específico de Canva
+            window.location.href = "https://www.canva.com/";
+            
+            // Si quieres que se abra en una nueva pestaña, usa esto en lugar de lo anterior:
+            // window.open("https://www.canva.com/", "_blank");
+        });
+    </script>
+</body>
+</html>
